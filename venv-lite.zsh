@@ -47,7 +47,7 @@ _venv_path() {
 
 
 mkvirtualenv () {
-    python -m venv --use-system-packages $(_venv_path $1)
+    python -m venv --system-site-packages $(_venv_path $1)
     workon $1
 }
 
